@@ -1,4 +1,18 @@
-# ![StudySnap Icon](app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp) StudySnap
+<p align="center">
+  <img src="docs/icon.png" alt="StudySnap Icon" width="180"/>
+</p>
+
+<h1 align="center">StudySnap</h1>
+
+<p align="center">
+  A simple Android app built with Kotlin and Jetpack Compose
+</p>
+
+<p align="center">
+  AI assistant for study notes
+</p>
+
+---
 
 **StudySnap** is a simple Android application built with **Kotlin** and **Jetpack Compose**.  
 It helps students work with lecture notes and study materials using AI.
