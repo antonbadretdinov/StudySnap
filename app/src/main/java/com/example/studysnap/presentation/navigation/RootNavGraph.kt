@@ -54,7 +54,7 @@ fun RootNavGraph(
             SummaryScreen(
                 inputText = navController.previousBackStackEntry
                     ?.savedStateHandle
-                    ?.get<String>("input_text")
+                    ?.get<String>(INPUT_TEXT_KEY)
                     .orEmpty(),
                 onBackClick = {
                     navController.popBackStack()
@@ -68,7 +68,7 @@ fun RootNavGraph(
             EasierExplainScreen(
                 inputText = navController.previousBackStackEntry
                     ?.savedStateHandle
-                    ?.get<String>("input_text")
+                    ?.get<String>(INPUT_TEXT_KEY)
                     .orEmpty(),
                 onBackClick = {
                     navController.popBackStack()
@@ -82,7 +82,7 @@ fun RootNavGraph(
             MakeQuestionsScreen(
                 inputText = navController.previousBackStackEntry
                     ?.savedStateHandle
-                    ?.get<String>("input_text")
+                    ?.get<String>(INPUT_TEXT_KEY)
                     .orEmpty(),
                 onBackClick = {
                     navController.popBackStack()

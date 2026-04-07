@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1049683246728",
+    "project_id": "studysnap-c2a9e",
+    "storage_bucket": "studysnap-c2a9e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049683246728:android:a605d45ed11f02c3b9a93d",
+        "android_client_info": {
+          "package_name": "com.example.studysnap"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHIwAwp0C0D3CcFPkOWHzzCLtqdKBWL8g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

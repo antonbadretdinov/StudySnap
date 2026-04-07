@@ -70,3 +70,8 @@ presentation/
       ├── summary/
       ├── easierExplain/
       └── makeQuestions/
+```
+
+## Project launch
+
+- To run the project, add your own google-services.json file to the app/ directory and configure Firebase AI Logic in your Firebase project.

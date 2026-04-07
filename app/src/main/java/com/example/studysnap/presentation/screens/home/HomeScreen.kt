@@ -29,6 +29,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -95,7 +96,7 @@ private fun HomeScreenContent(
         ) {
             Image(
                 painter = painterResource(id = R.drawable.study_header),
-                contentDescription = "Иллюстрация обучения",
+                contentDescription = stringResource(R.string.home_header_content_description),
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(180.dp)
@@ -106,7 +107,7 @@ private fun HomeScreenContent(
             Spacer(modifier = Modifier.height(16.dp))
 
             Text(
-                text = "AI-помощник для учебных заметок",
+                text = stringResource(R.string.home_subtitle),
                 style = MaterialTheme.typography.bodyLarge,
                 color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.55f),
                 textAlign = TextAlign.Center
@@ -125,7 +126,7 @@ private fun HomeScreenContent(
                         .height(260.dp),
                     placeholder = {
                         Text(
-                            text = "Введите текст лекции или конспекта",
+                            text = stringResource(R.string.home_input_placeholder),
                             color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.45f)
                         )
                     },
@@ -151,7 +152,11 @@ private fun HomeScreenContent(
                 )
 
                 Text(
-                    text = "${state.text.length}/${HomeViewModel.MAX_NOTE_LENGTH}",
+                    text = stringResource(
+                        R.string.home_character_counter,
+                        state.text.length,
+                        HomeViewModel.MAX_NOTE_LENGTH
+                    ),
                     modifier = Modifier
                         .align(Alignment.End)
                         .padding(top = 4.dp, end = 4.dp),
@@ -163,7 +168,7 @@ private fun HomeScreenContent(
             Spacer(modifier = Modifier.height(24.dp))
 
             ActionButton(
-                text = "Кратко",
+                text = stringResource(R.string.home_action_summary),
                 isLoading = state.isLoading,
                 onClick = onSummarizeClick
             )
@@ -171,7 +176,7 @@ private fun HomeScreenContent(
             Spacer(modifier = Modifier.height(12.dp))
 
             ActionButton(
-                text = "Объяснить проще",
+                text = stringResource(R.string.home_action_explain_easier),
                 isLoading = state.isLoading,
                 onClick = onSimplifyClick
             )
@@ -179,7 +184,7 @@ private fun HomeScreenContent(
             Spacer(modifier = Modifier.height(12.dp))
 
             ActionButton(
-                text = "Сделать вопросы",
+                text = stringResource(R.string.home_action_make_questions),
                 isLoading = state.isLoading,
                 onClick = onQuestionsClick
             )

@@ -38,30 +38,27 @@ class HomeViewModel @Inject constructor() : ViewModel() {
     }
 
     fun onSummarizeClick() {
-        val validatedText = validateAndPrepare() ?: return
+        validateAndPrepare() ?: return
 
         viewModelScope.launch {
-            // TODO: вызов usecase для summary
             _navigationEvent.send(HomeNavigationEvent.NavigateToSummary)
             setLoading(false)
         }
     }
 
     fun onSimplifyClick() {
-        val validatedText = validateAndPrepare() ?: return
+        validateAndPrepare() ?: return
 
         viewModelScope.launch {
-            // TODO: вызов usecase для easier explain
             _navigationEvent.send(HomeNavigationEvent.NavigateToEasierExplain)
             setLoading(false)
         }
     }
 
     fun onQuestionsClick() {
-        val validatedText = validateAndPrepare() ?: return
+        validateAndPrepare() ?: return
 
         viewModelScope.launch {
-            // TODO: вызов usecase для questions
             _navigationEvent.send(HomeNavigationEvent.NavigateToMakeQuestions)
             setLoading(false)
         }
