@@ -1,6 +1,7 @@
 package com.example.studysnap.presentation.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -51,11 +52,15 @@ fun RootNavGraph(
         composable(
             route = Routes.SummaryScreenDestination.route
         ) {
-            SummaryScreen(
-                inputText = navController.previousBackStackEntry
+            val inputText = remember {
+                navController.previousBackStackEntry
                     ?.savedStateHandle
                     ?.get<String>(INPUT_TEXT_KEY)
-                    .orEmpty(),
+                    .orEmpty()
+            }
+
+            SummaryScreen(
+                inputText = inputText,
                 onBackClick = {
                     navController.popBackStack()
                 }
@@ -65,11 +70,15 @@ fun RootNavGraph(
         composable(
             route = Routes.EasierExplainScreenDestination.route
         ) {
-            EasierExplainScreen(
-                inputText = navController.previousBackStackEntry
+            val inputText = remember {
+                navController.previousBackStackEntry
                     ?.savedStateHandle
                     ?.get<String>(INPUT_TEXT_KEY)
-                    .orEmpty(),
+                    .orEmpty()
+            }
+
+            EasierExplainScreen(
+                inputText = inputText,
                 onBackClick = {
                     navController.popBackStack()
                 }
@@ -79,11 +88,15 @@ fun RootNavGraph(
         composable(
             route = Routes.MakeQuestionsScreenDestination.route
         ) {
-            MakeQuestionsScreen(
-                inputText = navController.previousBackStackEntry
+            val inputText = remember {
+                navController.previousBackStackEntry
                     ?.savedStateHandle
                     ?.get<String>(INPUT_TEXT_KEY)
-                    .orEmpty(),
+                    .orEmpty()
+            }
+
+            MakeQuestionsScreen(
+                inputText = inputText,
                 onBackClick = {
                     navController.popBackStack()
                 }
