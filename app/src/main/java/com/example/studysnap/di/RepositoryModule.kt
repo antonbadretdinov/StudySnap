@@ -1,7 +1,7 @@
 package com.example.studysnap.di
 
-import com.example.studysnap.data.repositories.ExampleRepositoryImpl
-import com.example.studysnap.domain.repositories.ExampleRepository
+import com.example.studysnap.data.repositories.AiRepositoryImpl
+import com.example.studysnap.domain.repositories.AiRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,5 +14,5 @@ object RepositoryModule {
 
     @Singleton
     @Provides
-    fun provideExampleRepository(): ExampleRepository = ExampleRepositoryImpl()
+    fun provideAiRepository(): AiRepository = AiRepositoryImpl()
 }

@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">StudySnap</string>
+
+    <!--HomeScreen-->
+    <string name="home_header_content_description">Иллюстрация обучения</string>
+    <string name="home_subtitle">AI-помощник для учебных заметок</string>
+    <string name="home_input_placeholder">Введите текст лекции или конспекта</string>
+    <string name="home_action_summary">Кратко</string>
+    <string name="home_action_explain_easier">Объяснить проще</string>
+    <string name="home_action_make_questions">Сделать вопросы</string>
+    <string name="home_character_counter">%1$d/%2$d</string>
+
+    <!--MakeQuestionsScreen-->
+    <string name="make_questions_title">Сделать вопросы</string>
+
+    <!--SummaryScreen-->
+    <string name="summary_title">Кратко</string>
+
+    <!--EasierExplainScreen-->
+    <string name="easier_explain_title">Объяснить проще</string>
 </resources>
